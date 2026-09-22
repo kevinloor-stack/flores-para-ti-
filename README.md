@@ -1,1 +1,253 @@
 # flores-para-ti-
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Para ti 🌻💛</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      min-height: 100vh;
+      overflow: hidden;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: linear-gradient(180deg, #fff9c4 0%, #ffe082 45%, #ffca28 100%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #5d4037;
+    }
+    .sun {
+      position: absolute;
+      width: 180px;
+      height: 180px;
+      background: #fff176;
+      border-radius: 50%;
+      top: -70px;
+      right: -50px;
+      box-shadow: 0 0 80px #fff59d;
+      opacity: 0.8;
+    }
+    .container {
+      position: relative;
+      z-index: 5;
+      width: 90%;
+      max-width: 700px;
+      text-align: center;
+      padding: 45px 25px;
+      background: rgba(255,255,255,0.72);
+      backdrop-filter: blur(10px);
+      border-radius: 30px;
+      box-shadow: 0 15px 50px rgba(121, 85, 20, 0.25);
+      border: 2px solid rgba(255,255,255,0.8);
+    }
+    h1 {
+      font-size: clamp(2.2rem, 7vw, 4.5rem);
+      color: #f9a825;
+      margin-bottom: 15px;
+      text-shadow: 2px 3px 0 #fff;
+      animation: aparecer 1.5s ease;
+    }
+    .subtitle {
+      font-size: clamp(1rem, 3vw, 1.35rem);
+      line-height: 1.7;
+      margin-bottom: 25px;
+      color: #6d4c41;
+    }
+    .flowers {
+      font-size: clamp(4rem, 12vw, 7rem);
+      margin: 10px 0 20px;
+      animation: flotar 3s ease-in-out infinite;
+      filter: drop-shadow(0 10px 10px rgba(120,80,0,0.2));
+    }
+    .message {
+      font-size: 1.15rem;
+      line-height: 1.7;
+      margin: 10px auto 25px;
+      max-width: 580px;
+    }
+    button {
+      border: none;
+      background: linear-gradient(135deg, #fbc02d, #f9a825);
+      color: white;
+      padding: 15px 30px;
+      border-radius: 50px;
+      font-size: 1.05rem;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 8px 20px rgba(249,168,37,0.4);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    button:hover {
+      transform: translateY(-3px) scale(1.03);
+      box-shadow: 0 12px 25px rgba(249,168,37,0.5);
+    }
+    #surprise {
+      display: none;
+      margin-top: 25px;
+      animation: aparecer 1s ease;
+    }
+    #surprise p {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: #e65100;
+      line-height: 1.6;
+    }
+    .floating-flower {
+      position: absolute;
+      font-size: 35px;
+      animation: subir linear infinite;
+      opacity: 0.75;
+      pointer-events: none;
+    }
+    .flower1 { left: 5%; animation-duration: 9s; }
+    .flower2 { left: 18%; animation-duration: 12s; animation-delay: 2s; }
+    .flower3 { left: 35%; animation-duration: 10s; animation-delay: 4s; }
+    .flower4 { left: 60%; animation-duration: 13s; animation-delay: 1s; }
+    .flower5 { left: 80%; animation-duration: 11s; animation-delay: 3s; }
+    .flower6 { left: 92%; animation-duration: 14s; animation-delay: 5s; }
+    .heart {
+      position: absolute;
+      color: #e91e63;
+      font-size: 25px;
+      animation: subir linear infinite;
+      opacity: 0.5;
+    }
+    .heart1 { left: 12%; animation-duration: 8s; }
+    .heart2 { left: 45%; animation-duration: 11s; animation-delay: 3s; }
+    .heart3 { left: 72%; animation-duration: 9s; animation-delay: 1s; }
+    @keyframes aparecer {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    @keyframes flotar {
+      0%, 100% {
+        transform: translateY(0) rotate(-2deg);
+      }
+      50% {
+        transform: translateY(-12px) rotate(2deg);
+      }
+    }
+    @keyframes subir {
+      0% {
+        bottom: -60px;
+        transform: rotate(0deg);
+      }
+      50% {
+        transform: translateX(30px) rotate(15deg);
+      }
+      100% {
+        bottom: 110%;
+        transform: translateX(-20px) rotate(-15deg);
+      }
+    }
+    @media (max-width: 600px) {
+      .container {
+        padding: 35px 20px;
+      }
+      .message {
+        font-size: 1rem;
+      }
+      button {
+        padding: 13px 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="sun"></div>
+  <!-- Flores flotando -->
+  <div class="floating-flower flower1">🌻</div>
+  <div class="floating-flower flower2">🌼</div>
+  <div class="floating-flower flower3">🌻</div>
+  <div class="floating-flower flower4">🌼</div>
+  <div class="floating-flower flower5">🌻</div>
+  <div class="floating-flower flower6">🌼</div>
+  <!-- Corazones -->
+  <div class="heart heart1">💛</div>
+  <div class="heart heart2">💛</div>
+  <div class="heart heart3">💛</div>
+  <main class="container">
+    <div class="flowers">
+      🌻🌻🌻
+    </div>
+    <h1>Para ti, mi amor 💛</h1>
+    <p class="subtitle">
+      Porque hay días que merecen un poquito más de color,
+      de alegría y de amor...
+    </p>
+    <p class="message">
+      Hoy quería regalarte flores amarillas 🌻<br>
+      para recordarte lo especial que eres para mí.
+      <br><br>
+      Que nunca te falten motivos para sonreír,
+      momentos bonitos y alguien que quiera verte feliz.
+    </p>
+    <button onclick="mostrarSorpresa()">
+      💛 Tengo algo para ti 💛
+    </button>
+    <div id="surprise">
+      <p>
+        🌻 Si pudiera regalarte una flor por cada vez
+        que pienso en ti, tendrías un jardín entero. 🌻
+        <br><br>
+        Te quiero muchísimo. 💛
+      </p>
+    </div>
+  </main>
+  <script>
+    function mostrarSorpresa() {
+      const sorpresa = document.getElementById("surprise");
+      if (sorpresa.style.display === "block") {
+        sorpresa.style.display = "none";
+      } else {
+        sorpresa.style.display = "block";
+        crearCorazones();
+      }
+    }
+    function crearCorazones() {
+      for (let i = 0; i < 15; i++) {
+        const heart = document.createElement("div");
+        heart.innerHTML = "💛";
+        heart.style.position = "fixed";
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.bottom = "-30px";
+        heart.style.fontSize = (20 + Math.random() * 25) + "px";
+        heart.style.zIndex = "20";
+        heart.style.pointerEvents = "none";
+        document.body.appendChild(heart);
+        const duration = 3 + Math.random() * 3;
+        heart.animate(
+          [
+            {
+              transform: "translateY(0) rotate(0deg)",
+              opacity: 1
+            },
+            {
+              transform: `translateY(-${window.innerHeight + 100}px) rotate(${Math.random() * 360}deg)`,
+              opacity: 0
+            }
+          ],
+          {
+            duration: duration * 1000,
+            easing: "ease-out"
+          }
+        );
+        setTimeout(() => {
+          heart.remove();
+        }, duration * 1000);
+      }
+    }
+  </script>
+</body>
+</html>
